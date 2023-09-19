@@ -9,6 +9,8 @@ MODEL_VERSION_ID = 'ad16eda6ac054796bf9f348ab6733c72'
 
 arr = []
 
+RAW_TEXT = ""
+
 for i in range(0, number_of_resume):
   reader = PdfReader("Profile"+str(i)+".pdf")
   number_of_pages = len(reader.pages)
