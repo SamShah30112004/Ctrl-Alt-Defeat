@@ -12,9 +12,10 @@ arr = []
 for i in range(0, number_of_resume):
   reader = PdfReader("Profile"+str(i)+".pdf")
   number_of_pages = len(reader.pages)
-  page = reader.pages[0]
-  text = page.extract_text()
-  arr.append(text)
+  for j in range(0,number_of_pages):
+    page = reader.pages[j]
+    text = page.extract_text()
+    arr.append(text)
   
 arr.append('''I am a recruiter and i have a few resumes, and i want you to make sure that the conditions i specify are satisfied in it. and then rate it out of 10 and specify the best.
 Conditions are:
